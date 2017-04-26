@@ -31,5 +31,7 @@ namespace lab9_
 
             label2.Text = (sum / (A.Length)).ToString();
         }
+
+        
     }
 }
