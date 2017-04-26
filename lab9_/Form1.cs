@@ -22,14 +22,17 @@ namespace lab9_
             string s = textBox1.Text;
             string[] A = s.Split(',');
             int temp = 0, avg = 0;
-            
-            for (int i=0; i<A.Length;i++)
+            int c = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
                 avg = Convert.ToInt32(A[i]);
-               temp += avg;
-               
+                temp += avg;
+                c = i;
             }
 
-            label2.Text = (temp / (A.Length-1) ).ToString();
+
+            label2.Text = (temp / c).ToString();
         }
     }
 }
+
