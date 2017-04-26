@@ -21,18 +21,15 @@ namespace lab9_
         {
             string s = textBox1.Text;
             string[] A = s.Split(',');
-            int temp = 0, avg = 0;
-            int c = 0;
-            for (int i = 0; i < A.Length; i++)
-            {
-                avg = Convert.ToInt32(A[i]);
-                temp += avg;
-                c = i;
+            int sum = 0, n = 0;
+
+            for (int i=0; i<A.Length;i++) { 
+                n = Convert.ToInt32(A[i]);
+               sum = sum + n;
+               
             }
 
-
-            label2.Text = (temp / c).ToString();
+            label2.Text = (sum / (A.Length)).ToString();
         }
     }
 }
-
