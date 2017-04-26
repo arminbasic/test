@@ -16,5 +16,20 @@ namespace lab9_
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string s = textBox1.Text;
+            string[] A = s.Split(',');
+            int temp = 0, avg = 0;
+            
+            for (int i=0; i<A.Length;i++)
+                avg = Convert.ToInt32(A[i]);
+               temp += avg;
+               
+            }
+
+            label2.Text = (temp / (A.Length-1) ).ToString();
+        }
     }
 }
